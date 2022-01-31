@@ -1,24 +1,24 @@
 import React, {useState} from 'react'
+import {v1} from 'uuid'
 import GreetingContainer from './GreetingContainer'
-import {v1} from "uuid";
 
-// types
+
 export type UserType = {
-    _id: string // need to fix any
-    name: string // need to fix any
+    _id: string
+    name: string
 }
 
-// уровень работы с глобальными данными
-function HW3() {
-    const [users, setUsers] = useState<UserType[]>([]) // need to fix any
 
-    const addUserCallback = (name: string) => { // need to fix any
-        const newUser: UserType = {
+function HW3() {
+    const [users, setUsers] = useState<Array<UserType>>([]) // need to fix any
+
+    const addUserCallback = (name: string) => {
+
+        let userNew = {
             _id: v1(),
             name,
         }
-        let setNewUser = [newUser, ...users]
-        setUsers(setNewUser) // need to fix
+        setUsers([...users, userNew]) // need to fix
     }
 
     return (
