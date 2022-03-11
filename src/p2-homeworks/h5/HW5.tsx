@@ -1,15 +1,14 @@
 import React from 'react'
-import {HashRouter} from 'react-router-dom'
 import Header from './Header'
 import Routers from './Routers'
+import HW4 from "../h4/HW4";
 
 function HW5() {
     return (
         <div>
-            <HashRouter>
-                <Header/>
-                <Routers/>
-            </HashRouter>
+            <HW4/>
+            <Header/>
+            <Routers/>
         </div>
     )
 }
